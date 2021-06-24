@@ -24,5 +24,10 @@ The script has examples of how to leverage modules and variables to provide code
 10. Creates VWAN ER and VPN Gateway
 11. Creates VWAN Route Table
 12. Creates VNet Connection between Hub VNet and VWAN Hub
+13. Creates an example load balancer
+    1. Public IP address
+    2. Load Balancer
+    3. HTTP Rule
+    4. Backend Address Pool
 
 Deployment of each environment is specified via an object defined in your tfvars file.
