@@ -28,11 +28,11 @@ resource "azurerm_express_route_gateway" "hub_er_gateway" {
 }
 
 resource "azurerm_virtual_hub_connection" "vhub_vnet_connection" {
-    for_each = toset(var.vnet_ids)
+    count = length(var.vnet_ids)
 
-    name                      = format("%s-to-vhub-vwan-%s-%s",element(split("/",each.value),length(split("/",each.value))-1),var.location,var.unique_id)
+    name                      = format("%s-to-vhub-vwan-%s-%s",element(split("/",var.vnet_ids[count.index]),length(split("/",var.vnet_ids[count.index]))-1),var.location,var.unique_id)
     virtual_hub_id            = azurerm_virtual_hub.vwan_hub.id
-    remote_virtual_network_id = each.value
+    remote_virtual_network_id = var.vnet_ids[count.index]
 }
 
 resource "azurerm_virtual_hub_route_table" "vhub_route_table" {
