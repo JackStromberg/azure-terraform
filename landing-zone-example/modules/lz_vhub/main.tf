@@ -45,7 +45,7 @@ resource "azurerm_virtual_hub_route_table" "vhub_route_table" {
         destinations_type = "CIDR"
         destinations      = ["10.0.0.0/16"]
         next_hop_type     = "ResourceId"
-        next_hop          = azurerm_virtual_hub_connection.vhub_vnet_connection[var.vnet_ids[0]].id
+        next_hop          = azurerm_virtual_hub_connection.vhub_vnet_connection[0].id
     }
 
 }
