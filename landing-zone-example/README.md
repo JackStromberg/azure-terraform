@@ -1,5 +1,5 @@
 ## Overview
-This is an example script to help walk through building a custom landing zone in Azure via Terraform.
+This is an example script to help walk through building a custom landing zone in Azure via Terraform.  The Virtual WAN implementation in this example makes an assumption that you  are bringing your own Virtual Appliance and aligns to this documented here: https://docs.microsoft.com/en-us/azure/virtual-wan/scenario-route-through-nvas-custom#workflow
 
 ## Goal
 The goal of this is to show an example of how to create a cookie-cutter deployment of common resources and specify a parameterized input to deploy to multiple regions.
