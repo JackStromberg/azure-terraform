@@ -2,7 +2,7 @@
 This is an example script written in Terraform to help walk through deploy Virtual WAN to multiple Azure regions with VPN and ExpressRoute Gateways.
 
 ## Goal
-The goal of this is to show an example of how to deploy Azure Virtual WAN via Terraform to enable cross region and on-premises connectivity via parameterized input.
+The goal of this is to show an example of how to deploy Azure Virtual WAN via Terraform to enable cross region and on-premises connectivity via parameterized input.  The script provides flexibility to deploy to any number of Azure regions, just specify which ones you want to deploy to!
 
 ## Examples
 The script has examples of how to leverage modules and variables to provide code portability, reusability, and help with readability.
